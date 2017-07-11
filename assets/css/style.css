@@ -4,9 +4,11 @@ h2 {
 	border-radius: 10px;
 	text-shadow: -1px 0 #11f46e, 0 1px #11f46e, 1px 0 #11f46e, 0 -1px #11f46e;
 }
-body {
+/*@media only screen and (min-width: 640px) and (max-width: 1200px) {
+	body {
+		text-align: center;
+	}*/
 
-}
 #subheading {
 	text-align: center;
 }
