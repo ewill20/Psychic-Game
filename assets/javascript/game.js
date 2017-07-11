@@ -1,4 +1,3 @@
-
 $( document ).ready(function() {
 
 	// Sets all the default values for wins, losses, guesses remaining, and an empty guesses variable //
