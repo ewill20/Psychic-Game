@@ -1,0 +1,17 @@
+h2 {
+	font-size: 65px;
+	text-align: center;
+	border-radius: 10px;
+	text-shadow: -1px 0 #11f46e, 0 1px #11f46e, 1px 0 #11f46e, 0 -1px #11f46e;
+}
+body {
+
+}
+#subheading {
+	text-align: center;
+}
+h1 {
+	border-radius: 3px;
+	color: #ff5739;
+	text-shadow: -1px 0 #ff5739, 0 1px #ff5739, 1px 0 #ff5739, 0 -1px #ff5739;
+}

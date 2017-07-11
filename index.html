@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+  	
+	<!-- Added a link to Bootstrap -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  	<!-- Link to CSS stylesheet -->
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  	
+	<!-- Link to Javascript -->
+  	<script type="text/javascript" rel="stylesheet" href="assets/javascript/game.js"></script>
+	
+	<!-- Link to Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montez" rel="stylesheet">
+	
+	<!-- Link to jQuery Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	</head>
+ <body style="background-image: url(assets/images/Psychic.jpg");>
+	<div class="container">
+		<div id="row1" class="row">
+			<div class="col-md-12">
+ 			<h2 style="font-family: 'Great Vibes', cursive; color: white;">Psychic Game</h2>
+		</div>
+	</div>
+<div id="row2" class="row">
+	<div class="col-md-12">
+ 		<h1 id="subheading" style="font-family: 'Montez', cursive; color: white;">Guess Which Letter I'm Thinking Of...</h1>
+	</div>
+</div>
+	<div id="row3" class="row">
+	<div class="col-md-1"></div>
+		<div class="col-md-4">
+ 			<h1 style="font-family: 'Montez', cursive; color: white;"><span id="guessesL"></span></h1>
+ 			<h1 style="font-family: 'Montez', cursive; color: white;"><span id="guesses"></span></h1>
+ 		</div>
+ 		<div class="col-md-3"></div>
+ 		<div class="col-md-2">
+ 			<h1 style="font-family: 'Montez', cursive; color: white;"><span id="wins"></span></h1>
+ 			<h1 style="font-family: 'Montez', cursive; color: white;"><span id="losses"></span></h1>
+ 		</div>
+ 	</div>
+
+<script type="text/javascript">
+var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
+    'm','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+// Variables for tracking our wins & losses. They begin at 0.
+var wins = 0;
+var losses = 0;
+var guessesRem = 9;
+
+
+
+    var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+
+    console.log(computerChoice)
+
+
+document.onkeypress = function(event) {
+    var userGuess = event.key;
+   
+    for(var i = 0; i < 1; i++) {
+
+    if(userGuess === computerChoice){
+        wins++;
+        alert("You Win!")
+    }else{
+        guessesRem--;
+    }
+    if(guesses === 0){
+        losses++;
+	}
+	
+}
+
+
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+    document.getElementById('losses').innerHTML = "losses: " + losses;
+    document.getElementById('guessesL').innerHTML = "Guesses left: " + guessesRem;
+    document.getElementById('guesses').innerHTML = "Guesses So Far: " + userGuess;
+}
+
+
+</script>
+ 	
+
+
+
+
+
+
+ </body>
+ </html>
