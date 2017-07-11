@@ -53,7 +53,7 @@ function resetL() {
     	$("span#losses").text("Losses: " + losses);
     	resetL();
     };
-
+    
 
 
 	// Tracks which key the user pressed //
@@ -79,9 +79,9 @@ function resetL() {
     if(guessesRem === 0) {
         loser();
     }
-    if(userGuess != computerChoice) {
+}
+  if(userGuess != computerChoice) {
         guessesRem--;
-    }
-  }
+    };
 };
 })
